@@ -1,0 +1,15 @@
+<div class="top-bar">
+    <h1>Add Another Jazz Artist</h1>
+</div>
+
+<!--Add item Section-->
+<!--A List of all of our expenses and income-->
+<section class="add-artist-section">
+    <div class="add-artist-container">
+        <!-- TODO Add Angular Form for adding info -->
+        <app-add-artist-form style="padding:20px;" (formSubmit) = 'addItem($event)'></app-add-artist-form>
+    </div>
+</section>
+​
+<hr style="margin-top:0px;">
+<app-artist-item-list [artistItems] = "artistItems" (delete) = "deleteItem($event)" (update) = "updateItem($event)"></app-artist-item-list>

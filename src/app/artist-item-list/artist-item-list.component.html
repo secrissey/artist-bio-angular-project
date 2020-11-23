@@ -1,0 +1,16 @@
+<section class="artist-items-section">
+    <div class="artist-items-container">
+
+        <div class="artist-column">
+            <h1>Artist</h1>
+
+            <div class="artist-items">
+                <div *ngFor="let item of artistItems">
+                    <app-artist-item-card *ngIf="item.description" [item] = "item"
+                    (xButtonClick) = "onDelete(item)" (cardClick) = "onCardClicked(item)" 
+                    style="display:block; margin-bottom: 20px;"></app-artist-item-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
